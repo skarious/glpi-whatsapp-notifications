@@ -49,7 +49,7 @@ function plugin_whatsappnotification_item_add(CommonDBTM $item){
     $data = array(
         "number" => $user_mobile_phone,
         "textMessage" => array("text" => "Nuevo Ticket Generado\n" .
-        "Usuario: {$user->fields['realname']}" . {$user->fields['firstname']}\n" .
+        "Usuario: {$user->fields['realname']}" .
         "Empresa: {$entity->fields['name']}\n" .
         "Motivo: {$item->fields['name']}.\n" .
         "Numero Ticker: *{$item->fields['id']}.*")
