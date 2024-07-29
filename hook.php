@@ -4,7 +4,7 @@
 */
 
 define("URL_API_WHATSAPP", "http://192.168.0.236:8080/message/sendText/mio");
-define("WHATSAPP_TOKEN", "B6D711FCDE4D4FD5936544120E713976");
+define("WHATSAPP_TOKEN", "B6D711FCDE4D4FD5936544120E71397");
 
 
 function alertaNovoChamadoWhatsApp($remoteJid, $message){
