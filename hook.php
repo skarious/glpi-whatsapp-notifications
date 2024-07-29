@@ -3,8 +3,8 @@
   ESTE PLUGIN É COMPATÍVEL COM A API WHATSAPP "EVOLUTION".
 */
 
-define("URL_API_WHATSAPP", "http://e/message/sendText/my-instance");
-define("WHATSAPP_TOKEN", "token-goes-here");
+define("URL_API_WHATSAPP", "http://192.168.0.236:8080/message/sendText/aaaa");
+define("WHATSAPP_TOKEN", "B6D711FCDE4D4FD5936544120E713976");
 
 
 function alertaNovoChamadoWhatsApp($remoteJid, $message){
