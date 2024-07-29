@@ -48,11 +48,11 @@ function plugin_whatsappnotification_item_add(CommonDBTM $item){
     $user_mobile_phone = $user->fields["mobile"];
     $data = array(
         "number" => $user_mobile_phone,
-        "textMessage" => array("text" => "Novo Chamado do ServiceDesk\n" .
+        "textMessage" => array("text" => "Nuevo Ticket Generado\n" .
         "Usuario: {$user->fields['name']}\n" .
         "Cliente: {$entity->fields['name']}\n" .
         "Motivo: {$item->fields['name']}.\n" .
-        "Numero do Chamado: {$item->fields['id']}.")
+        "Numero Ticker: *{$item->fields['id']}.*")
     );
     foreach($WhatsappAlertDestinations as $remoteJid){
         alertaNovoChamadoWhatsApp($remoteJid, $data);
