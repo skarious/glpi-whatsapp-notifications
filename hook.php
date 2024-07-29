@@ -3,7 +3,7 @@
   ESTE PLUGIN É COMPATÍVEL COM A API WHATSAPP "EVOLUTION".
 */
 
-define("URL_API_WHATSAPP", "https://whats.sysadminbrasil.com.br/message/sendText/my-instance");
+define("URL_API_WHATSAPP", "http://e/message/sendText/my-instance");
 define("WHATSAPP_TOKEN", "token-goes-here");
 
 
