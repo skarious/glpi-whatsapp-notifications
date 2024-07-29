@@ -34,7 +34,7 @@ function alertaNovoChamadoWhatsApp($remoteJid, $message){
 
 function plugin_whatsappnotification_item_add(CommonDBTM $item){
     // define quem vai receber os alertas
-    $WhatsappAlertDestinations = array("595985624358", "595985624358");
+    $WhatsappAlertDestinations = array("595985624358", "595985757630");
     
     // carrega a entidade
     $entity_id = $item->fields["entities_id"];
