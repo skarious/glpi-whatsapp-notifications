@@ -1,10 +1,10 @@
 <?php
 /*
-  ESTE PLUGIN É COMPATÍVEL COM A API WHATSAPP "EVOLUTION".
+  ESTE PLUGIN É COMPATÍVEL COM A API WHATSAPP "EVOLUTION"..
 */
 
-define("URL_API_WHATSAPP", "https://whats.sysadminbrasil.com.br/message/sendText/my-instance");
-define("WHATSAPP_TOKEN", "token-goes-here");
+define("URL_API_WHATSAPP", "http://192.168.0.236:8080/message/sendText/aaaa");
+define("WHATSAPP_TOKEN", "B6D711FCDE4D4FD5936544120E713976");
 
 
 function alertaNovoChamadoWhatsApp($remoteJid, $message){
@@ -34,7 +34,7 @@ function alertaNovoChamadoWhatsApp($remoteJid, $message){
 
 function plugin_whatsappnotification_item_add(CommonDBTM $item){
     // define quem vai receber os alertas
-    $WhatsappAlertDestinations = array("5531931313131", "5531931313132");
+    $WhatsappAlertDestinations = array("595985624358", "595985757630");
     
     // carrega a entidade
     $entity_id = $item->fields["entities_id"];
@@ -48,11 +48,11 @@ function plugin_whatsappnotification_item_add(CommonDBTM $item){
     $user_mobile_phone = $user->fields["mobile"];
     $data = array(
         "number" => $user_mobile_phone,
-        "textMessage" => array("text" => "Novo Chamado do ServiceDesk\n" .
-        "Usuario: {$user->fields['name']}\n" .
+        "textMessage" => array("text" => "Nuevo Ticket Generado\n" .
+        "Usuario: {$user->fields['realname']} {$user->fields['firstname']}\n" .
         "Cliente: {$entity->fields['name']}\n" .
         "Motivo: {$item->fields['name']}.\n" .
-        "Numero do Chamado: {$item->fields['id']}.")
+        "Numero Ticker: *{$item->fields['id']}.*")
     );
     foreach($WhatsappAlertDestinations as $remoteJid){
         alertaNovoChamadoWhatsApp($remoteJid, $data);
